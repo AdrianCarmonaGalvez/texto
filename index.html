@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El fondo marino</title>
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+</head>
+<style>
+    body    {background-image: url("./fondo.jpg");
+                background-size: 1920px ;}
+    #cuadrado   {background-color: rgba(136, 136, 136, 0.384);
+                padding: 25px;
+                border-radius: 25px;
+                text-align: center;
+                font-family: 'Trebuchet MS', sans-serif;
+                font-weight: bold;}
+    #boton  {background-color: blue;}
+</style>
+<body>
+    <div id="cuadrado">
+    <h1>Significado del mar por la wikipedia</h1>
+    <h3>Cambiando tamaño de los textos</h3>
+    <button id="boton" onclick="Agranda()"> grande</button>
+    <button id="boton" onclick="Reset()"> medio</button>
+    <button id="boton" onclick="Reduce()"> pequeño</button>
+    <p>El mar —considerado de forma genérica, como el conjunto de los mares y océanosNota Nota Nota, también llamado océano mundial o simplemente el océano, es el cuerpo de agua salada interconectada que cubre más del 70% de la superficie de la Tierra (361 132 000 km², con un volumen total de aproximadamente 1 332 000 000 km³).</p>
+    <p>Modera el clima del planeta y tiene papeles importantes en los ciclos del agua, del carbono y del nitrógeno. Se ha viajado y explorado desde la antigüedad, mientras que el estudio científico del mar, la oceanografía, se remonta a los viajes del capitán James Cook para explorar el océano Pacífico entre 1768 y 1779.</p>
+    <p>La palabra «mar» también se usa para indicar secciones más pequeñas del océano, en parte interiores, y para algunos grandes lagos salados, totalmente interiores, como el mar Caspio, el mar Muerto o el mar de Aral. Se habla entonces de mar cerrado o interior, aunque el término correcto sería el de lago endorreico.</p>
+    <p>La salinidad varía ampliamente, siendo más baja cerca de la superficie y en las desembocaduras de los grandes ríos y más alta en las profundidades del océano; sin embargo, las proporciones relativas de sales disueltas varían poco en los océanos.
+    </p>
+    </div>
+    <script>
+        function Agranda(){
+            let parrafos=document.getElementsByTagName("p");
+            for (i=0;i<parrafos.length;i++){
+                parrafos[i].style.fontSize="1.2em";
+            }
+        }
+        function Reset(){
+            let parrafos=document.getElementsByTagName("p");
+            for (i=0;i<parrafos.length;i++){
+                parrafos[i].style.fontSize="1em";
+            }
+        }
+        function Reduce(){
+            let parrafos=document.getElementsByTagName("p");
+            for (i=0;i<parrafos.length;i++){
+                parrafos[i].style.fontSize="0.8em";
+            }
+        }
+    </script>
+</body>
+</html>
